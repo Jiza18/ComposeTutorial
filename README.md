@@ -3,6 +3,8 @@
 Actividad dirigida **Android Compose**
 <br>
 
+![perrito](https://media0.giphy.com/media/Dh5q0sShxgp13DwrvG/giphy.gif?cid=ecf05e47tz0icr4ojj10v3ce4wrfj9t1iwsn9yhlh1jgwwvm&ep=v1_gifs_search&rid=giphy.gif&ct=g)
+
 ## Composable Functions
 ### PASO 1
 
@@ -281,4 +283,8 @@ Por ultimo agregamos animaciones a las tarjetas de conversación desplegables. N
 ![a2](https://github.com/Jiza18/ComposeTutorial/assets/113170616/b2507717-70d1-45f5-8e4c-12958811c106)
 
 ## FIN
-Repositorio diseñado con Markdown - Jose Miguel Izarra.
+Las definiciones redactadas, es lo que pude interpretar de cada paso de la actividad.
+<br>
+Repositorio diseñado con Markdown - Jose Miguel Izarra©.
+<br>
+![gatito](https://media.tenor.com/1NRoxR1fXngAAAAi/hug-cat.gif)
