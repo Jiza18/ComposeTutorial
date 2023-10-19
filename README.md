@@ -72,7 +72,7 @@ fun MessageCard(msg: Message) {
 }
 ```
 <br><br>
-## PASO 2
+### PASO 2
 En este paso, organizamos el contenido de el mensaje con la funcion *'Column'* que te permite organizar elementos de forma vertical.
 <br><br>
 Code
