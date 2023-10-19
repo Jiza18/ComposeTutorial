@@ -153,6 +153,132 @@ Preview
 
 ## Material Desing
 ### PASO 1
+En esta sección empezamos a dar diseño y estilo a nuestra aplicación, por lo tanto en este paso unimos nuestra funcion *'MessageCard'* con el tema de nuestro proyecto e implementamos un elemento *'Surface'*. Esto hace que los elementos hereden estilos del tema de la app y conservar la coherencia entre del estilo de la aplicación.
 
+```kotlin
+class MainActivity : ComponentActivity() {
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContent {
+            ComposeTutorialTheme {
+                Surface(modifier = Modifier.fillMaxSize()) {
+                    MessageCard(Message("Jose Miguel", "Compose Tutorial"))
+                }
+            }
+        }
+    }
+}
 
+@Preview
+@Composable
+fun PreviewMessageCard() {
+    ComposeTutorialTheme {
+        Surface {
+            MessageCard(msg = Message("Algo", "De puerba"))
+        }
+    }
+}
+```
+<br><br>
+### PASO 2
+En este paso usamos la libreria *'MaterialThemes.color'*
+para aplicar colores con la paleta del tema del proyecto. NOTA: en este paso tuve invonvenientes con alguna variables de la libreria, por lo tanto, trate de conseguir el mismo resultado, pero con variables diferentes a las del tutorial.
+<br><br>
+Code
+```kotlin
+@Composable
+fun MessageCard(msg: Message) {
+   Row(modifier = Modifier.padding(all = 8.dp)) {
+       Image(
+           painter = painterResource(R.drawable.profile_picture),
+           contentDescription = "Que bonita esta la asiatica",
+           modifier = Modifier
+               .size(40.dp)
+               .clip(CircleShape)
+               .border(1.5.dp, MaterialTheme.colorScheme.secondary, CircleShape)
+       )
 
+       Spacer(modifier = Modifier.width(8.dp))
+
+       Column {
+           Text(text = msg.author,)
+           Spacer(modifier = Modifier.height(4.dp))
+           Text(text = msg.body)
+       }
+   }
+}
+```
+<br><br>
+### PASO 3
+NOTA: en este paso el tutorial propone perzonalizar la tipografía del texto pero no logre hacerlo porque en mi version de Android Studio, no funcionaban esas referencias a la libreria.
+
+### PASO 4
+En este paso unimos el cuerpo del texto del mensaje con un elemento *'Surface'* y agregamos el *'Shape'* que nos permite personalizar la forma y el cuerpo del mensaje. En este caso indicamos que si se expande el mensaje muestra todo el contenido, de no ser asi, solo mostrara una linea.
+
+```kotlin
+Surface(
+            shape = MaterialTheme.shapes.medium,
+        ){
+            Text(text = msg.body,
+                modifier = Modifier.padding(all = 4.dp),t
+                maxLines = if (isExpanded) Int.MAX_VALUE else 1)
+        }
+```
+
+### PASO 5
+En este paso habilitamos el tema oscuro de nuestra aplicación. Jetpack Compose es capaz de hacerlo de forma predeterminada.
+<br><br>
+Code
+```kotlin
+@Preview(name = "Light Mode")
+@Preview(
+    uiMode = Configuration.UI_MODE_NIGHT_YES,
+    showBackground = true,
+    name = "Dark Mode"
+)
+```
+<br><br>
+Preview
+<br><br>
+![preview dark mode](https://github.com/Jiza18/ComposeTutorial/assets/113170616/de20460f-95d5-461e-a227-9ec2ae1a0777)
+<br><br>
+## List and Animations
+### PASO 1
+En esta sección implementamos una lista y animaciones para nuestra aplicación. Creamos una función *'Conversation'* para mostrar varios mensajes. Usamos un elemento nuevo LazyColumn, es un elemento de Compose que renderiza objetos visibles en la pantalla, especialmente diseñado para listas largas. Ademas agregamos contenido a la aplicacion con una lista de mensajes que nos proporciona el tutorial.
+<br><br>
+Code
+```kotlin
+@Composable
+fun Conversation(messages: List<Message>) {
+    LazyColumn {
+        items(messages) { message ->
+            MessageCard(message)
+        }
+    }
+}
+@Preview
+@Composable
+fun PreviewConversation() {
+    ComposeTutorialTheme {
+        Conversation(SampleData.conversationSample)
+    }
+}
+```
+<br><br>
+Preview
+<br><br>
+**Sin expandir**
+<br>
+![a1](https://github.com/Jiza18/ComposeTutorial/assets/113170616/0f23efdf-350e-4281-ac61-13c989539593)
+<br><br>
+**Expandido**
+<br>
+![a2](https://github.com/Jiza18/ComposeTutorial/assets/113170616/b2507717-70d1-45f5-8e4c-12958811c106)
+<br><br>
+### PASO 2
+Por ultimo agregamos animaciones a las tarjetas de conversación desplegables. NOTA: en este paso tambien tuve problemas y solo consegui una animación.
+<br><br>
+![a2](https://github.com/Jiza18/ComposeTutorial/assets/113170616/b2507717-70d1-45f5-8e4c-12958811c106)
+
+## FIN
+Repositorio diseñado con Markdown - Jose Miguel Izarra.
