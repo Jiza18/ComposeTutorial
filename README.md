@@ -29,7 +29,7 @@ Preview
 <br><br>
 ### PASO 2
 
-El segundo paso a seguir en el tutoria es definir una funcion de componibilidad utilizando la etiqueta *´@Composable´*
+El segundo paso a seguir en el tutorial es definir una funcion de componibilidad utilizando la etiqueta *´@Composable´*
 <br><br>
 Code
 <br>
@@ -42,7 +42,7 @@ fun MessageCard(name: String) {
 <br><br>
 
 ### PASO 3
-En el siguiente paso usamos la etiqueta *'@Preview'* para obtener una vista previa de una función sin necesidad de emular un dispositivo.
+En el siguiente paso, usamos la etiqueta *'@Preview'* para obtener una vista previa de una función sin necesidad de emular un dispositivo.
 <br><br>
 Code
 ```kotlin
@@ -59,7 +59,7 @@ Preview
 <br><br>
 ## Layouts
 ### PASO 1
-En este paso modificamos la funcion *'MessageCard'* para que reciba como parametro un objeto *Message* en vez de un *String*, luego definir este objeto para poder colocar mas contenido dentro del mensaje.
+En este paso, modificamos la funcion *'MessageCard'* para que reciba como parametro un objeto *Message* en vez de un *String*, luego definir este objeto para poder colocar mas contenido dentro del mensaje.
 <br><br>
 Code
 ```kotlin
@@ -73,7 +73,7 @@ fun MessageCard(msg: Message) {
 ```
 <br><br>
 ## PASO 2
-En este caso organizamos el contenido de el mensaje con la funcion *'Column'* que te permite organizar elementos de forma vertical.
+En este paso, organizamos el contenido de el mensaje con la funcion *'Column'* que te permite organizar elementos de forma vertical.
 <br><br>
 Code
 ```kotlin
@@ -92,7 +92,7 @@ Preview
 <br><br>
 
 ### PASO 3
-En este paso agregamos un elemeto de imagen usando el *Resource Manager* que nos ofrece el IDE de **Android Studio** para importarla desde nuestra biblioteca y dentro de un elemento *'Row'* agregamos el codigo de la imagen junto a la columna con el texto para que quede el contenido bien estrucuturado.
+En este paso, agregamos un elemeto de imagen usando el *Resource Manager* que nos ofrece el IDE de **Android Studio** para importarla desde nuestra biblioteca y dentro de un elemento *'Row'* agregamos el codigo de la imagen junto a la columna con el texto para que quede el contenido bien estrucuturado.
 <br><br>
 
 Code
@@ -122,7 +122,7 @@ Preview
 <br><br>
 
 ### PASO 4
-En este paso usamos modificadores de Compose para cambiar el diseño de nuestra imagen, ya que puede esta bien estructurado el mensaje pero las dimensiones de la imagen pueden ser demasiado grandes. NOTA: en este paso tuve algunos inconvenientes con algunas variables del tutorial que en mi version de android studio no me permitia utilizar.
+En este paso, usamos modificadores de Compose para cambiar el diseño de nuestra imagen, ya que puede esta bien estructurado el mensaje pero las dimensiones de la imagen pueden ser demasiado grandes. NOTA: en este paso tuve algunos inconvenientes con algunas variables del tutorial que en mi version de android studio no me permitia utilizar.
 <br><br>
 Code
 ```kotlin
@@ -155,7 +155,7 @@ Preview
 
 ## Material Desing
 ### PASO 1
-En esta sección empezamos a dar diseño y estilo a nuestra aplicación, por lo tanto en este paso unimos nuestra funcion *'MessageCard'* con el tema de nuestro proyecto e implementamos un elemento *'Surface'*. Esto hace que los elementos hereden estilos del tema de la app y conservar la coherencia entre del estilo de la aplicación.
+En esta sección, empezamos a dar diseño y estilo a nuestra aplicación, por lo tanto en este paso unimos nuestra funcion *'MessageCard'* con el tema de nuestro proyecto e implementamos un elemento *'Surface'*. Esto hace que los elementos hereden estilos del tema de la app y conservar la coherencia entre del estilo de la aplicación.
 
 ```kotlin
 class MainActivity : ComponentActivity() {
@@ -183,7 +183,7 @@ fun PreviewMessageCard() {
 ```
 <br><br>
 ### PASO 2
-En este paso usamos la libreria *'MaterialThemes.color'*
+En este paso, usamos la libreria *'MaterialThemes.color'*
 para aplicar colores con la paleta del tema del proyecto. NOTA: en este paso tuve invonvenientes con alguna variables de la libreria, por lo tanto, trate de conseguir el mismo resultado, pero con variables diferentes a las del tutorial.
 <br><br>
 Code
@@ -212,10 +212,10 @@ fun MessageCard(msg: Message) {
 ```
 <br><br>
 ### PASO 3
-NOTA: en este paso el tutorial propone perzonalizar la tipografía del texto pero no logre hacerlo porque en mi version de Android Studio, no funcionaban esas referencias a la libreria.
+NOTA: en este paso. el tutorial propone perzonalizar la tipografía del texto pero no logre hacerlo porque en mi version de Android Studio, no funcionaban esas referencias a la libreria.
 
 ### PASO 4
-En este paso unimos el cuerpo del texto del mensaje con un elemento *'Surface'* y agregamos el *'Shape'* que nos permite personalizar la forma y el cuerpo del mensaje. En este caso indicamos que si se expande el mensaje muestra todo el contenido, de no ser asi, solo mostrara una linea.
+En este paso, unimos el cuerpo del texto del mensaje con un elemento *'Surface'* y agregamos el *'Shape'* que nos permite personalizar la forma y el cuerpo del mensaje. En este caso indicamos que si se expande el mensaje muestra todo el contenido, de no ser asi, solo mostrara una linea.
 
 ```kotlin
 Surface(
@@ -228,7 +228,7 @@ Surface(
 ```
 
 ### PASO 5
-En este paso habilitamos el tema oscuro de nuestra aplicación. Jetpack Compose es capaz de hacerlo de forma predeterminada.
+En este paso, habilitamos el tema oscuro de nuestra aplicación. Jetpack Compose es capaz de hacerlo de forma predeterminada.
 <br><br>
 Code
 ```kotlin
@@ -246,7 +246,7 @@ Preview
 <br><br>
 ## List and Animations
 ### PASO 1
-En esta sección implementamos una lista y animaciones para nuestra aplicación. Creamos una función *'Conversation'* para mostrar varios mensajes. Usamos un elemento nuevo LazyColumn, es un elemento de Compose que renderiza objetos visibles en la pantalla, especialmente diseñado para listas largas. Ademas agregamos contenido a la aplicacion con una lista de mensajes que nos proporciona el tutorial.
+En esta sección, implementamos una lista y animaciones para nuestra aplicación. Creamos una función *'Conversation'* para mostrar varios mensajes. Usamos un elemento nuevo LazyColumn, es un elemento de Compose que renderiza objetos visibles en la pantalla, especialmente diseñado para listas largas. Ademas agregamos contenido a la aplicacion con una lista de mensajes que nos proporciona el tutorial.
 <br><br>
 Code
 ```kotlin
@@ -278,7 +278,7 @@ Preview
 ![a2](https://github.com/Jiza18/ComposeTutorial/assets/113170616/b2507717-70d1-45f5-8e4c-12958811c106)
 <br><br>
 ### PASO 2
-Por ultimo agregamos animaciones a las tarjetas de conversación desplegables. NOTA: en este paso tambien tuve problemas y solo consegui una animación.
+Por ultimo, agregamos animaciones a las tarjetas de conversación desplegables. NOTA: en este paso tambien tuve problemas y solo consegui una animación.
 <br><br>
 ![a2](https://github.com/Jiza18/ComposeTutorial/assets/113170616/b2507717-70d1-45f5-8e4c-12958811c106)
 
